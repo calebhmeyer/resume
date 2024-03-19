@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Redirecting...</title>
     <script>
-        function redirectBasedOnScreenWidth() {
-            const mobileWidthThreshold = 767; // Define mobile width threshold
-            const screenWidth = window.innerWidth; // Get screen width
-
-            if (screenWidth <= mobileWidthThreshold) {
-                // If screen width is less than or equal to threshold, redirect to mobile version
+        function redirectToVersion() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Redirect to the mobile version
                 window.location.href = "https://calebhmeyer.github.io/resume_mobile/";
             } else {
-                // Otherwise, redirect to desktop version
+                // Redirect to the desktop version
                 window.location.href = "https://calebhmeyer.github.io/resume_desktop/";
             }
         }
 
-        // Run the redirect function as soon as the page loads
-        window.onload = redirectBasedOnScreenWidth;
+        window.onload = redirectToVersion;
     </script>
 </head>
 <body>
