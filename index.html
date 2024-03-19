@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        function redirectBasedOnScreenWidth() {
+            const mobileWidthThreshold = 767; // Define mobile width threshold
+            const screenWidth = window.innerWidth; // Get screen width
+
+            if (screenWidth <= mobileWidthThreshold) {
+                // If screen width is less than or equal to threshold, redirect to mobile version
+                window.location.href = "https://calebhmeyer.github.io/resume_mobile/";
+            } else {
+                // Otherwise, redirect to desktop version
+                window.location.href = "https://calebhmeyer.github.io/resume_mobile/";
+            }
+        }
+
+        // Run the redirect function as soon as the page loads
+        window.onload = redirectBasedOnScreenWidth;
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the appropriate version of the resume...</p>
+</body>
+</html>
